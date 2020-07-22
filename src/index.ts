@@ -65,6 +65,10 @@ app.get('/todo/App/api/todos', (req, res)=> {
     return res.json(todos)
 })
 
+app.get('/todo/App/api/health', (req, res)=> {
+    return res.json({health: 'Good'})
+})  
+
 app.post('/todo/App/api/todo', (req, res)=> {
     const todo: Todo = req.body;
     todo.id = todos.length + 1
