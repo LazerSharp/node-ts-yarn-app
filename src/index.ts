@@ -11,7 +11,7 @@ log4js.configure({
 const logger = log4js.getLogger("logger");
 
 const app = express();
-const port = process.env.PORT || '8000';
+const port = process.env.PORT || '81';
 
 const loggerMW = (req: express.Request, res: express.Response, next: NextFunction) => {
     logger.debug('request: ', req.method, req.url,  req.body)
